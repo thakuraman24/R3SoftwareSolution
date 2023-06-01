@@ -96,5 +96,8 @@ function generateCV() {
 
 // print CV
 function printCV() {
-  window.print();
+  const element=document.getElementById("cv-template");
+  html2pdf()
+  .from(element)
+  .save();
 }
