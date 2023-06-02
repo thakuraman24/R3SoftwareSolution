@@ -97,7 +97,9 @@ function generateCV() {
 // print CV
 function printCV() {
   const element=document.getElementById("cv-template");
-  html2pdf()
-  .from(element)
-  .save();
+  var opt = {
+    filename:     'R3 Software Solutin Resume.pdf',
+  };
+
+  html2pdf().set(opt).from(element).save();
 }
